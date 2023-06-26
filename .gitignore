@@ -1,0 +1,38 @@
+.htaccess
+.htpasswd
+.DS_Store
+Thumbs.db
+.idea
+# wordpress config, user-content and caches
+cache/
+wp-config.php
+wp-content/cache/
+wp-content/cache/supercache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wflogs/
+# WordPress debugging files & logs
+*.log
+debug.log
+log.txt
+logs/
+# don't commit database dumpfiles
+*.sql
+*.sql.gz
+*.sql.tgz
+*.sql.zip
+*.gz
+*.zip
+*.mp4
+# Docker experiments
+_log/
+_profiler/
+stats/
+error/
+.quarantine/
+.tmb/
+
+error_log
+robots.txt
+favicon.ico
+sitemap.xml
