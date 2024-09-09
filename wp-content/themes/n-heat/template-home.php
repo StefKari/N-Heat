@@ -36,26 +36,29 @@
 
     <!-- END Home slider -->
 
+
+    <!-- About block Home Page -->
+
     <?php
     $block_image = get_field('block_image');
     $block_title = get_field('main_title');
     $block_description = get_field('short_description');
     $block_link = get_field('block_link');
     ?>
-    <section class="fp-section video-block" id="section2">
-        <?php $mp4 = get_field('mp4_video');
-        $video_image = get_field('poster_image');
-        if ($mp4) : ?>
-            <video id="video" width="100%" height="auto" poster="<?php echo esc_url($video_image['url']); ?>" loop muted playsinline data-autoplay>
-                <source id="video_src" src="<?php echo esc_attr($mp4['url']); ?>" type="video/mp4">
+    <!-- <section class="fp-section video-block" id="section2"> -->
+        <?php //$mp4 = get_field('mp4_video');
+        //$video_image = get_field('poster_image');
+        //if ($mp4) : ?>
+            <!-- <video id="video" width="100%" height="auto" poster="<?php // echo esc_url($video_image['url']); ?>" loop muted playsinline data-autoplay> -->
+                <!-- <source id="video_src" src="<?php // echo esc_attr($mp4['url']); ?>" type="video/mp4"> -->
                 <!-- <div class="content">
                     <div class="play"></div>
                     <h1></h1>
                     <p> </p>
                 </div> -->
-            </video>
-        <?php endif; ?>
-    </section>
+            <!-- </video> -->
+        <?php // endif; ?>
+    <!-- </section> -->
 
     <!-- About block Home Page -->
     <section class="fp-section about-block" id="section3">
@@ -137,7 +140,6 @@
                 // Reset the global post object so that the rest of the page works correctly.
                 wp_reset_postdata(); ?>
             <?php endif; ?>
-
 
         </div>
     </section>
