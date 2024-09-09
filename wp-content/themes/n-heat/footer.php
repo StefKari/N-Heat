@@ -70,6 +70,7 @@ $img = get_field('footer_logo', 'option');
 <script src="<?php echo get_template_directory_uri() . '/assets/js/search-filter-build.min.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/jquery.countup.min.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js' ?>"></script>
+<script src="<?php echo get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/scrolloverflow.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/fullpage.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/bootstrap.bundle.js' ?>"></script>
@@ -77,6 +78,10 @@ $img = get_field('footer_logo', 'option');
 <script src="<?php echo get_template_directory_uri() . '/assets/js/jquery.fancybox.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/index.js' ?>"></script>
 <script src="<?php echo get_template_directory_uri() . '/assets/js/main.js' ?>"></script>
+
+
+<?php wp_footer(); ?>
+
 </body>
 
 </html>

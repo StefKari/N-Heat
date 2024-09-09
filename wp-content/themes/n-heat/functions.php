@@ -15,6 +15,15 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 add_action( 'pre_get_posts', 'custom_post_type_archive' );
 
 
+add_filter("gform_validation_message", "gwp_change_message", 10, 2);
+function gwp_change_message($message, $form){
+    return '
+<div class="gform_validation_errors">Došlo je do greške pri popunjavanju prijave. Molimo Vas da popunite sva označena obavezna polja. Hvala!
+</div>
+';
+}
+
+
 function custom_post_type_archive( $query ) {
 
     if( $query->is_main_query() && !is_admin() && is_post_type_archive( 'products' ) ) {
@@ -109,3 +118,20 @@ function filter_ajax() {
 
 */
 
+
+
+function get_post_char_limit($str, $maxStr) 
+{
+    $str = strip_tags($str);
+   
+    if ($str != null) {
+        if (strlen($str) <= $maxStr) {
+            return trim($str);
+        } else {
+            $shorStr = substr($str, 0, $maxStr);
+            $shorStr .= "...";
+
+            return trim($shorStr);
+        }
+    }
+}

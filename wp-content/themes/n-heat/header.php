@@ -16,9 +16,12 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/fullpage.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/all.min.css' ?>" />
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/jquery.fancybox.css' ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/magnific.css'?>"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <?php wp_head(); ?> 
 </head>
 <header class="header">
     <div class="container">
@@ -53,7 +56,7 @@
                     <img src="<?php echo get_template_directory_uri() . '/assets/img/danfoss_logo.png'; ?>" alt="Danfoss logo">
                 </a>
                 <div class="mobile-phone">
-                    <a href="tel:+381113018118"><i class="fas fa-phone-alt"></i></a>
+                    <a href="tel:+381603023400"><i class="fas fa-phone-alt"></i></a>
                 </div>
                 <div class="hamburger-menu d-lg-none">
                     <div class="menu">
