@@ -193,6 +193,61 @@ $(document).ready(function() {
             time: 2000
         });
 
+
+
+        // if ($('#customize').length) {
+        //     var tiny_slider4 = tns({
+        //         container: "#customize",
+        //         items: 1,
+        //         controlsContainer: "#customize-controls",
+        //         navContainer: "#customize-thumbnails",
+        //         navAsThumbnails: true,
+        //         autoplayButton: false,
+        //         autoplay: false,
+        //         autoplayTimeout: 5000,
+        //         swipeAngle: false,
+        //         speed: 400,
+        //         mode: 'gallery',
+        //         animateIn: 'fadeIn',
+        //         // animateNormal: 'tns-normal',
+        //         animateDelay: 500
+
+        //     });
+        // }
+
+        if ($('.project-single-slider').length) {
+            var tiny_slider1 = tns({
+                container: ".project-single-slider",
+                items: 1,
+                controlsContainer: "#customize-controls",
+                swipeAngle: false,
+                speed: 400,
+                fixedWidth: false,
+                nav: false,
+                loop: true,
+                center: true,
+                startIndex: 0,
+                slideCount: 'slideCount', // original slide count
+                responsive: {
+                    992: {
+                        items: 2,
+                        fixedWidth: 850,
+                    }
+                },
+
+            });
+
+            let info = tiny_slider1.getInfo(),
+                current = document.querySelector('.current-slide'),
+                total = document.querySelector('.total');
+            current.textContent = tiny_slider1.getInfo().displayIndex;
+            total.textContent = info.slideCount;
+
+            tiny_slider1.events.on('transitionEnd', function(info) {
+                current.textContent = tiny_slider1.getInfo().displayIndex;
+            });
+        }
+
     });
     /* $(document).on('click', '.js-filter-item > a', function(e){
          e.preventDefault();
@@ -251,6 +306,15 @@ $(window).bind('resize', function() {
 
 });
 
+jQuery('.gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+    }
+
+})
 
 
 window.addEventListener('load', setup);
