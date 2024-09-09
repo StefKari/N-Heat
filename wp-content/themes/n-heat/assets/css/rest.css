@@ -2900,3 +2900,8 @@ padding-top: 45px;
         text-transform: uppercase;
         padding: 10px 20px;
     }
+    
+    .item-photo img {
+        max-width: 300px !important;
+        max-height: 300px !important;
+    }

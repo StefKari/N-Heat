@@ -47,7 +47,11 @@ $service_text = get_field('baner_tekst');
                 <div class="project-holder">
                     <!-- slika projekta -->
                     <div class="item-photo">
-                    <?php the_post_thumbnail( 'full', array('class' => 'imageOffer') ); ?>
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('full', array('class' => 'imageOffer')); ?>
+                        <?php else : ?>
+                            <img src="/wp-content/uploads/2024/09/no-image.png" class="imageOffer" alt="No Image Available">
+                        <?php endif; ?>
                     </div>
                     <!-- End slika projekta -->
         
